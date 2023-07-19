@@ -16,4 +16,11 @@ public class BankAccountService {
          bankAccount.setAmount(amount);
          return bankAccount;
     }
+/*
+    public void makePayment(BankAccount receiverAccount, BankAccount senderAccount){
+        receiverAccount.setAmount(receiverAccount.getAmount().add(amount)); //Alıcı hesabın mevcut bakiyesine ödeme tutarını ekler
+        senderAccount.setAmount(senderAccount.getAmount().subtract(amount));// Gönderen hesabın mevcut bakiyesinden ödeme tutarını çıkarır
+    }
+
+ */
 }

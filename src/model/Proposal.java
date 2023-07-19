@@ -1,6 +1,7 @@
 package model;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Proposal {
@@ -11,16 +12,16 @@ public class Proposal {
 
     private BigDecimal offerPrice;
 
-    private Date starDate;
-    private Date endDate;
+    private LocalDate starDate;
+    private LocalDate endDate;
 
-    private Date expireDate;
+    private LocalDate expireDate;
 
-    private boolean isApproved;
+    private boolean isApproved = false;
 
     private BigDecimal discountPrice;
 
-    public Proposal(InsuranceCompany company, Vehicle vehicle, BigDecimal offerPrice, Date starDate, Date endDate, Date expireDate, boolean isApproved, BigDecimal discountPrice) {
+    public Proposal(InsuranceCompany company, Vehicle vehicle, BigDecimal offerPrice, LocalDate starDate, LocalDate endDate, LocalDate expireDate, boolean isApproved, BigDecimal discountPrice) {
         this.company = company;
         this.vehicle = vehicle;
         this.offerPrice = offerPrice;
@@ -58,27 +59,27 @@ public class Proposal {
         this.offerPrice = offerPrice;
     }
 
-    public Date getStarDate() {
+    public LocalDate getStarDate() {
         return starDate;
     }
 
-    public void setStarDate(Date starDate) {
+    public void setStarDate(LocalDate starDate) {
         this.starDate = starDate;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 
-    public Date getExpireDate() {
+    public LocalDate getExpireDate() {
         return expireDate;
     }
 
-    public void setExpireDate(Date expireDate) {
+    public void setExpireDate(LocalDate expireDate) {
         this.expireDate = expireDate;
     }
 
@@ -96,5 +97,19 @@ public class Proposal {
 
     public void setDiscountPrice(BigDecimal discountPrice) {
         this.discountPrice = discountPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Proposal{" +
+                "company=" + company +
+                ", vehicle=" + vehicle +
+                ", offerPrice=" + offerPrice +
+                ", starDate=" + starDate +
+                ", endDate=" + endDate +
+                ", expireDate=" + expireDate +
+                ", isApproved=" + isApproved +
+                ", discountPrice=" + discountPrice +
+                '}';
     }
 }

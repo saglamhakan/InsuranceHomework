@@ -1,11 +1,12 @@
 package model;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Accident {
 
-    private Date accidentDate;
+    private LocalDate accidentDate;
 
     private String description;
 
@@ -13,11 +14,11 @@ public class Accident {
 
     private int failureRate;
 
-    public Date getAccidentDate() {
+    public LocalDate getAccidentDate() {
         return accidentDate;
     }
 
-    public void setAccidentDate(Date accidentDate) {
+    public void setAccidentDate(LocalDate accidentDate) {
         this.accidentDate = accidentDate;
     }
 
@@ -43,5 +44,15 @@ public class Accident {
 
     public void setFailureRate(int failureRate) {
         this.failureRate = failureRate;
+    }
+
+    @Override
+    public String toString() {
+        return "Accident{" +
+                "accidentDate=" + accidentDate +
+                ", description='" + description + '\'' +
+                ", damagePrice=" + damagePrice +
+                ", failureRate=" + failureRate +
+                '}';
     }
 }

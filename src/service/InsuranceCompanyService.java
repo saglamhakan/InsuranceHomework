@@ -49,5 +49,8 @@ public class InsuranceCompanyService {
             paymentMovementArrayList.add(paymentMovement);
             insuranceCompany.setPaymentMovementList(paymentMovementArrayList);
         }
+
+
     }
+
 }

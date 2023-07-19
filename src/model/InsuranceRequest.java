@@ -35,4 +35,13 @@ public class InsuranceRequest {
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
+
+    @Override
+    public String toString() {
+        return "InsuranceRequest{" +
+                "proposalList=" + proposalList +
+                ", policy=" + policy +
+                ", vehicle=" + vehicle +
+                '}';
+    }
 }

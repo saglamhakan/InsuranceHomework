@@ -62,4 +62,15 @@ public class Agency {
     public void setCustomerList(ArrayList<Customer> customerList) {
         this.customerList = customerList;
     }
+
+    @Override
+    public String toString() {
+        return "Agency{" +
+                "name='" + name + '\'' +
+                ", bankAccountList=" + bankAccountList +
+                ", paymentMovementList=" + paymentMovementList +
+                ", insuranceCompanyList=" + insuranceCompanyList +
+                ", customerList=" + customerList +
+                '}';
+    }
 }

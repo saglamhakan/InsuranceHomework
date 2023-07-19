@@ -24,4 +24,12 @@ public class Insurance {
     public void setInsuranceTypeEnum(InsuranceTypeEnum insuranceTypeEnum) {
         this.insuranceTypeEnum = insuranceTypeEnum;
     }
+
+    @Override
+    public String toString() {
+        return "Insurance{" +
+                "name='" + name + '\'' +
+                ", insuranceTypeEnum=" + insuranceTypeEnum +
+                '}';
+    }
 }

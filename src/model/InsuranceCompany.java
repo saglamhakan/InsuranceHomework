@@ -82,4 +82,18 @@ public class InsuranceCompany {
     public void setPaymentMovementList(ArrayList<PaymentMovement> paymentMovementList) {
         this.paymentMovementList = paymentMovementList;
     }
+
+    @Override
+    public String toString() {
+        return "InsuranceCompany{" +
+                "name='" + name + '\'' +
+                ", taxNumber='" + taxNumber + '\'' +
+                ", taxOffice='" + taxOffice + '\'' +
+                ", address='" + address + '\'' +
+                ", commission=" + commission +
+                ", insuranceList=" + insuranceList +
+                ", bankAccountList=" + bankAccountList +
+                ", paymentMovementList=" + paymentMovementList +
+                '}';
+    }
 }
